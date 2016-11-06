@@ -1,0 +1,314 @@
+// core
+@import '~bootstrap-sass/assets/stylesheets/bootstrap'
+
+$workspace-minheight: 600px
+$grid-float-breakpoint: 480px
+$border-radius-base: 0
+$border-radius-large: 0
+$border-radius-small: 0
+
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color: lighten($gray-light, 15%)
+$navbar-inverse-bg: lighten($gray-dark, 5%)
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%)
+
+// Inverted navbar links
+$navbar-inverse-link-color: #fff
+$navbar-inverse-link-hover-color:  darken($gray-lighter, 5%)
+$navbar-inverse-link-hover-bg: transparent
+$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color
+$navbar-inverse-link-active-bg: darken($navbar-inverse-bg, 10%)
+$navbar-inverse-link-disabled-color: #444
+$navbar-inverse-link-disabled-bg:  transparent
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color: $navbar-inverse-link-color
+$navbar-inverse-brand-hover-color: #fff
+$navbar-inverse-brand-hover-bg: transparent
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg: #333
+$navbar-inverse-toggle-icon-bar-bg: #fff
+$navbar-inverse-toggle-border-color: #333
+
+$table-bg-active: darken($table-bg-hover, 10%)
+
+$component-active-color: #fff
+$component-active-bg: $brand-primary
+
+body 
+  padding-top: 50px
+  font-family: Arial, sans-serif
+
+.site-workspace 
+  min-height: $workspace-minheight
+
+//=== Sticky footer sitemap
+.footer 
+  height: 200px
+  background: $navbar-inverse-bg
+  color: $navbar-inverse-color
+
+.container 
+  width: auto
+  padding: 20px 20px
+
+.topbar-button 
+  color: lighten($navbar-inverse-color, 30%)
+  background-color: lighten($navbar-inverse-bg, 5%)
+  border: none
+  height: 35px
+  margin: 8px
+  margin-bottom: 0px
+
+.tooltip 
+  font-family: Arial, sans-serif
+
+.popover 
+  font-family: Arial, sans-serif
+
+.page-header 
+  min-height: 50px
+  padding-bottom: 0
+  margin: 0 $line-height-computed 0
+  border-bottom: 1px solid $page-header-border-color
+
+.navbar-inverse .navbar-nav > .active > a 
+  background-color: lighten($navbar-inverse-bg, 10%) !important
+
+.navbar-2 
+  padding-top: 20px
+
+.navbar-text 
+  margin-top: 7px
+  margin-bottom: 7px
+
+//=== Customização da área de trabalho
+//
+th 
+  //text-transform: uppercase
+
+h3 
+  text-transform: uppercase
+
+//==  Miscellaneous
+//
+.p-link,
+a 
+  cursor: pointer
+
+.p-disabled 
+  display: none !important
+
+.p-separator 
+  min-height: $line-height-computed
+  min-width: $line-height-computed
+
+.p-form 
+  max-width: 600px
+
+.p-form-sm 
+  max-width: 300px
+
+.div-table-header 
+  display: inline-flex
+
+.div-table-acoes 
+  width: 70px
+
+
+//=== Page header
+//
+.p-page-header 
+  &:extend(.page-header)
+  &:extend(.navbar-fixed-top)
+  top: 50px !important
+  height: 70px
+  margin-left: 0px
+  margin-right: 0px
+  padding-left: 20px
+  padding-right: 20px
+  background-color: white
+  z-index: 999
+
+.p-header-title 
+  text-transform: uppercase
+  font-size: $font-size-base * 2
+  margin: 0px
+  margin-top: 25px
+
+.p-header-subtitle 
+  &:extend(.p-header-title)
+  font-size: $font-size-base + 6
+  padding-bottom: 5px
+
+.p-header-subtitle-row-2 
+  &:extend(.p-header-title)
+  font-size: $font-size-base + 6
+  padding-bottom: 25px
+
+.p-header-row-0 
+  margin: 0px
+  margin-top: 0px !important
+
+.p-header-row-1 
+  margin: 0px
+  margin-top: 10px !important
+
+.p-header-row-2 
+  margin: 0px
+  margin-top: -5px !important
+  padding-top: 2px
+
+.p-page-bar 
+  &:extend(.navbar-fixed-top)
+  top: 120px !important
+  z-index: 999
+
+.p-bar 
+  &:extend(.nav)
+  &:extend(.navbar)
+  min-height: 34px
+  margin: 0px
+  margin-bottom: $line-height-computed
+  padding: 0px
+  padding-right: 10px
+  background-color: darken($gray-lighter, 5%)
+  border: 0px
+
+.p-bar .nav > li > .navbar-btn 
+  margin: 0px
+
+.p-bar .nav > li > a 
+  margin: 0px !important
+  padding-top: 8px !important
+  padding-bottom: 6px !important
+
+//=== Tabbar
+//
+.p-bar-tabs 
+  background-color: transparent
+  border-bottom: 2px solid darken($gray-lighter, 10%)
+
+.p-bar-tabs .nav > li.active 
+  //border-bottom: 2px solid $brand-primary
+  background-color: darken($gray-lighter, 5%)
+  border: 1px solid darken($gray-lighter, 10%)
+  border-bottom: none
+
+.p-bar-tabs .nav > li > a 
+  padding-bottom: 4px !important
+
+.p-header-bar 
+  background-color: white
+
+.p-page-content 
+  margin-top: 120px
+
+//== Utilities
+//
+.no-wrap-130 
+  min-width: 130px
+
+.no-wrap-200 
+  min-width: 200px
+
+.dropdown-toggle 
+  width: 100%
+
+.scrollable 
+  -webkit-overflow-scrolling: touch
+  overflow-y: auto
+  max-height: 51vh
+  position: inherit
+
+.scrollable-lg 
+  &:extend(.scrollable)
+  max-height: 100vh
+
+.div-right 
+  float: right !important
+
+.container-bottom 
+  &:extend(.container)
+  padding-bottom: 0px
+
+.pagination 
+  margin: 0
+  margin-top: 4px
+
+//= External Components
+//
+.select-picker 
+  width: 100%
+
+.picker__input 
+  border: 0
+  width: 100%
+  height: 100%
+  position: inherit
+
+.picker__holder 
+  overflow-y: visible
+
+.input-invisible 
+  width: 100%
+  height: 0px
+  border: 0px
+
+.col-sm-padding-0 
+  padding-right: 0
+  padding-left: 0
+
+td > .btn-link 
+  padding: 0
+  padding-left: 5px
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+input[type=number] 
+  -moz-appearance: textfield
+
+input[type=select] 
+  -moz-appearance: textfield
+
+.not-active 
+  pointer-events: none
+  cursor: default
+
+.jstree-default .jstree-themeicon 
+  visibility: hidden
+
+.jstree-default .jstree-wholerow-clicked 
+  background: transparent
+
+// Customizing tables:
+//
+.table tbody tr > td.success 
+  background-color: #dff0d8 !important
+
+.table tbody tr > td.error 
+  background-color: #f2dede !important
+
+.table tbody tr > td.warning 
+  background-color: #fcf8e3 !important
+
+.table tbody tr > td.info 
+  background-color: #d9edf7 !important
+
+.table-hover tbody tr:hover > td.success 
+  background-color: #d0e9c6 !important
+
+.table-hover tbody tr:hover > td.error 
+  background-color: #ebcccc !important
+
+.table-hover tbody tr:hover > td.warning 
+  background-color: #faf2cc !important
+
+.table-hover tbody tr:hover > td.info 
+  background-color: #c4e3f3 !important

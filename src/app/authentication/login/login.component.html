@@ -1,0 +1,20 @@
+<article>
+  <div class="container">
+    <form id="form-login" class="form-signin" (submit)="login($event, username.value, password.value)">
+
+      <label for="login" class="sr-only">Login</label>
+      <input id="login" #username class='form-control' placeholder='Usuário' class='form-control' required=true>
+
+      <label for="senha" class="sr-only">Senha</label>
+      <input id="senha" #password class='form-control' placeholder='Senha' class='form-control' type='password' required=true>
+
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Entrar</button>
+      </div>
+    </form>
+  </div>
+</article>
